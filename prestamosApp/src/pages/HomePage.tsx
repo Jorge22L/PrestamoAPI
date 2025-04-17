@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
+import { useLibros } from "../hooks/useLibros";
 
 export const HomePage = () => {
+    const { libros } = useLibros()
     return (
         <div className="container py-5">
             <div className="row">
@@ -9,6 +11,21 @@ export const HomePage = () => {
                         <i className="bi bi-book text-primary"></i> Sistema de Préstamos
                     </h1>
                     <p className="lead text-muted mb-5">Gestiona tu biblioteca con el sistema de préstamos.</p>
+                </div>
+            </div>
+
+            <div className="row g-4">
+                {/* Card Libros */}
+                <div className="col-md-4">
+                    <div className="card h-100 border-0 shadow-sm">
+                        <div className="card-body text-center">
+                            <h2 className="text-primary">
+                                <i className="bi bi-book"></i> {libros.length}
+                            </h2>
+                            <h5 className="card-title">Libros disponibles</h5>
+                            <Link to="/libros" className="btn btn-outline-primary mt-3">Gestionar Libros</Link>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
