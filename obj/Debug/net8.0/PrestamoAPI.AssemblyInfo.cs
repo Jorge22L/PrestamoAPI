@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PrestamoAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3bc6d4a1109bc2665d58e773c606c5282baf8f3b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e34673554c5e110307d91a22d2a88960ab27f69b")]
 [assembly: System.Reflection.AssemblyProductAttribute("PrestamoAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PrestamoAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
