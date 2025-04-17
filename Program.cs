@@ -14,12 +14,16 @@ builder.Services.AddDbContext<PrestamosContext>(opt => opt.UseSqlServer(builder.
 //Adding Repositories
 builder.Services.AddScoped<ILibroRepository, LibroRepository>();
 builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
+builder.Services.AddScoped<IPrestamoRepository, PrestamoRepository>();
 
 //Adding Services
 builder.Services.AddScoped<LibroService>();
 builder.Services.AddScoped<UsuarioService>();
+builder.Services.AddScoped<PrestamoService>();
 
 builder.Services.AddAutoMapper(typeof(LibroProfile));
+builder.Services.AddAutoMapper(typeof(UsuarioProfile));
+builder.Services.AddAutoMapper(typeof(PrestamoProfile));
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

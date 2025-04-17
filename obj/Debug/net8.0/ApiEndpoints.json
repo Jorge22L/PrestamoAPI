@@ -119,6 +119,145 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "PrestamoAPI.Controllers.PrestamosController",
+    "Method": "Listar",
+    "RelativePath": "api/Prestamos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Aplicacion.DTOs.PrestamoDto, Aplicacion, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "PrestamoAPI.Controllers.PrestamosController",
+    "Method": "Agregar",
+    "RelativePath": "api/Prestamos",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "prestamoCreateDto",
+        "Type": "Aplicacion.DTOs.PrestamoCreateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Aplicacion.DTOs.PrestamoDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "PrestamoAPI.Controllers.PrestamosController",
+    "Method": "BuscarPorId",
+    "RelativePath": "api/Prestamos/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Aplicacion.DTOs.PrestamoDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "PrestamoAPI.Controllers.PrestamosController",
+    "Method": "Eliminar",
+    "RelativePath": "api/Prestamos/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PrestamoAPI.Controllers.PrestamosController",
+    "Method": "Actualizar",
+    "RelativePath": "api/Prestamos/{idPrestamo}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idPrestamo",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "prestamoUpdateDto",
+        "Type": "Aplicacion.DTOs.PrestamoUpdateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Aplicacion.DTOs.PrestamoDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "PrestamoAPI.Controllers.PrestamosController",
+    "Method": "ListarPrestamosActivos",
+    "RelativePath": "api/Prestamos/activos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Aplicacion.DTOs.PrestamoDto, Aplicacion, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "PrestamoAPI.Controllers.UsuariosController",
     "Method": "Listar",
     "RelativePath": "api/Usuarios",
