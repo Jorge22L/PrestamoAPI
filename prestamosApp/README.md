@@ -1,42 +1,48 @@
-# React + TypeScript + Vite
+# PrestamoApp
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación web para la gestión de préstamos, desarrollada con React, TypeScript y Vite.
 
-Currently, two official plugins are available:
+## Descripción
+PrestamoApp es una plataforma que permite gestionar préstamos de manera eficiente. Incluye funcionalidades como registro de usuarios, gestión de préstamos, historial y reportes.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tecnologías utilizadas
+- [React](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Vite](https://vitejs.dev/)
 
-## Expanding the ESLint configuration
+## Instalación
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/Jorge22L/PrestamoAPI.git
+   ```
+2. Instala las dependencias:
+   ```bash
+   npm install
+   ```
+3. Inicia la aplicación:
+   ```bash
+   npm run dev
+   ```
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Estructura del proyecto
+- `src/`
+  - `components/` — Componentes reutilizables como NavBar y Footer
+  - `pages/` — Páginas principales de la aplicación (HomePage, etc.)
+  - `App.tsx` — Componente principal de la aplicación
+  - `main.tsx` — Punto de entrada de la aplicación
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Uso
+Accede a la aplicación en `http://localhost:5173` después de iniciar el servidor de desarrollo.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Contribución
+1. Haz un fork del repositorio
+2. Crea una rama (`git checkout -b feature/nueva-funcionalidad`)
+3. Realiza tus cambios y haz commit (`git commit -am 'Agrega nueva funcionalidad'`)
+4. Haz push a la rama (`git push origin feature/nueva-funcionalidad`)
+5. Abre un Pull Request
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Licencia
+Este proyecto está bajo la licencia MIT.
 
 export default tseslint.config({
   plugins: {
