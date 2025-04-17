@@ -95,3 +95,4 @@ C:\Users\Jorge\source\repos\PrestamoAPI\PrestamoAPI\obj\Debug\net8.0\refint\Pres
 C:\Users\Jorge\source\repos\PrestamoAPI\PrestamoAPI\obj\Debug\net8.0\PrestamoAPI.pdb
 C:\Users\Jorge\source\repos\PrestamoAPI\PrestamoAPI\obj\Debug\net8.0\PrestamoAPI.genruntimeconfig.cache
 C:\Users\Jorge\source\repos\PrestamoAPI\PrestamoAPI\obj\Debug\net8.0\ref\PrestamoAPI.dll
+C:\Users\Jorge\source\repos\PrestamoAPI\PrestamoAPI\obj\Debug\net8.0\PrestamoAPI.sourcelink.json

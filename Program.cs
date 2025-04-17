@@ -1,3 +1,4 @@
+using Aplicacion.Interfaces;
 using Aplicacion.Mappings;
 using Aplicacion.Repositories;
 using Aplicacion.Services;
@@ -12,9 +13,11 @@ builder.Services.AddDbContext<PrestamosContext>(opt => opt.UseSqlServer(builder.
 
 //Adding Repositories
 builder.Services.AddScoped<ILibroRepository, LibroRepository>();
+builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
 
 //Adding Services
 builder.Services.AddScoped<LibroService>();
+builder.Services.AddScoped<UsuarioService>();
 
 builder.Services.AddAutoMapper(typeof(LibroProfile));
 
