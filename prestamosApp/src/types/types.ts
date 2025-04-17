@@ -18,9 +18,9 @@ export interface Prestamo {
     idLibro: string;
     tituloLibro?: string;
     idUsuario: string;
-    usuarioNombre: string;
+    nombreUsuario: string;
     usuarioApellido: string;
-    fechaPrestamo: string;
-    fechaDevolucion: string;
+    fecha_Prestamo: string;
+    fecha_Devolucion: string;
     estado: 'Activo' | 'Devuelto';
 }

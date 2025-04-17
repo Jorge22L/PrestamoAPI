@@ -54,10 +54,10 @@ namespace PrestamoAPI.Controllers
             }
         }
 
-        [HttpPut("{idPrestamo}")]
-        public async Task<ActionResult<PrestamoDto>> Actualizar(Guid idPrestamo, [FromBody] PrestamoUpdateDto prestamoUpdateDto)
+        [HttpPut("{id}")]
+        public async Task<ActionResult<PrestamoDto>> Actualizar(Guid id, [FromBody] PrestamoUpdateDto prestamoUpdateDto)
         {
-            if(idPrestamo != prestamoUpdateDto.IdPrestamo)
+            if(id != prestamoUpdateDto.IdPrestamo)
             {
                 return BadRequest("El id del prestamo no coincide");
             }

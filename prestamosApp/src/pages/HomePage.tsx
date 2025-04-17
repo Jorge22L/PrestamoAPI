@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
 import { useLibros } from "../hooks/useLibros";
 import { useUsuarios } from "../hooks/useUsuarios";
+import { usePrestamos } from "../hooks/usePrestamos";
 
 export const HomePage = () => {
     const { libros } = useLibros()
     const { usuarios } = useUsuarios();
+    const { prestamos } = usePrestamos();
     return (
         <div className="container py-5">
             <div className="row">
@@ -38,6 +40,18 @@ export const HomePage = () => {
                             </h2>
                             <h5 className="card-title">Usuarios registrados</h5>
                             <Link to="/usuarios" className="btn btn-outline-primary mt-3">Gestionar Usuarios</Link>
+                        </div>
+                    </div>
+                </div>
+                {/* Card Prestamos */}
+                <div className="col-md-4">
+                    <div className="card h-100 border-0 shadow-sm">
+                        <div className="card-body text-center">
+                            <h2 className="text-primary">
+                                <i className="bi bi-calendar-date"></i> {prestamos.length}
+                            </h2>
+                            <h5 className="card-title">Prestamos registrados</h5>
+                            <Link to="/prestamos" className="btn btn-outline-primary mt-3">Gestionar Prestamos</Link>
                         </div>
                     </div>
                 </div>

@@ -6,11 +6,11 @@ export const prestamosApi = {
     listarActivos: () => apiClient.get('/prestamos/activos'),
     agregar: (prestamo: 
         { 
-            libroId: string; 
-            usuarioId: string;  
-            fechaDevolucion: string 
+            idLibro: string; 
+            idUsuario: string;  
+            fechaDevolucion: string | Date
         }) => apiClient.post('/prestamos', prestamo),
-    actualizar: (id: string, prestamo: { libroId?: string; usuarioId?: string; fechaPrestamo?: string; fechaDevolucion?: string }) => 
+    actualizar: (id: string, prestamo: { idLibro?: string; idUsuario?: string; fecha_Prestamo?: string; fecha_Devolucion?: string; estado?: 'Activo'|'Devuelto' }) => 
         apiClient.put(`/prestamos/${id}`, prestamo),
     eliminar: (id: string) => apiClient.delete(`/prestamos/${id}`)
 }

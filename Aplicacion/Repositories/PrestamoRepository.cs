@@ -21,12 +21,13 @@ namespace Aplicacion.Repositories
 
         public async Task Actualizar(Prestamo prestamo)
         {
+            _context.Entry(prestamo).State = EntityState.Detached;
             var prestamoExiste = await _context.Prestamos.AsNoTracking().FirstOrDefaultAsync(p => p.IdPrestamo == prestamo.IdPrestamo);
             if (prestamoExiste == null)
             {
                 throw new Exception("El prestamo no existe");
             }
-            prestamoExiste.Fecha_Devolucion = prestamo.Fecha_Prestamo != default ? prestamo.Fecha_Devolucion : prestamoExiste.Fecha_Devolucion;
+            prestamoExiste.Fecha_Devolucion = prestamo.Fecha_Devolucion != default ? prestamo.Fecha_Devolucion : prestamoExiste.Fecha_Devolucion;
             prestamoExiste.Estado = string.IsNullOrEmpty(prestamo.Estado) ? prestamoExiste.Estado : prestamo.Estado;
 
             _context.Prestamos.Update(prestamoExiste);
